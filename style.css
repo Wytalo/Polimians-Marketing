@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section1 {
+  background: url("https://images.pexels.com/photos/212286/pexels-photo-212286.jpeg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.section1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right,#442980,#bd158d);
+  opacity: .5; 
+}
+
+.s1__text {
+  width: 75%;
+  font-family: 'Barlow';
+  font-weight: bold;
+  font-size: 70px;
+  color: #FFF;
+  text-align: center;
+  text-shadow: 5px 3px 2px rgba(0, 0, 0, .2);
+  z-index: 1;
+}
+
+#mail {
+  margin: 80px auto;
+  z-index: 1;
+  width: 60%;
+  height: 100px;
+  background-color: transparent;
+  border: solid 1px #fff;
+  font-family: 'Barlow';
+  font-size: 16px;
+  color: #FFF;
+  text-align: center;
+  transition: 0.25s;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+#send {
+  margin: 0px auto;
+  z-index: 1;
+  width: 90px;
+  height: 40px;
+  background-color: transparent;
+  border: solid 1px #fff;
+  font-family: 'Barlow';
+  font-size: 16px;
+  color: #FFF;
+  text-align: center;
+  transition: 0.25s;
+  background-color: rgba(0, 0, 0, .2);
+  font-weight: bold;
+}
+
+#send:hover {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, .2);
+  transform: scale(1.1);
+}
+
+#mail:hover {
+  width: 65%;
+  height: 100px;
+  background-color: transparent;
+  border: solid 5px #fff;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+::placeholder { 
+  color: #fff;
+  opacity: 1;
+}
+
+.section2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cover {
+  height: 80vh;
+  width: auto;
+}
+
+.s2img {
+  margin-lefT: 75px;
+}
+
+.s2text, .s2img {
+  width: 50%;
+  height: 80vh;
+}
+
+.s2text {
+  font-family: 'Barlow';
+  font-size: 16px;
+  color: #FFF;
+  color:#442980;
+  margin-right: 75px;
+  text-align: justify;
+}
+
+h1 {
+  border-bottom: solid 3px #442980;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}

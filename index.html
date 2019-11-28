@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Aprenda a fazer um edital</title>
+
+</head>
+<body>
+  <div class="section1">
+    <div class="s1__text">
+      Faça o melhor edital da sua vida.
+    </div>
+    <input id="mail" placeholder="Digite seu e-mail aqui">
+    <button id="send"> Enviar </button>
+
+  </div>
+  <div class="section2">
+      <div class="s2img">
+        <img src ="capa.jpg" id="cover">
+      </div>
+      <div class="s2text">
+        <h1> O que você vai adquirir?</h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo debitis facilis, dolor alias optio dicta quas nihil consectetur voluptatem perferendis excepturi eligendi at exercitationem pariatur quam hic libero odit nisi. <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo debitis facilis, dolor alias optio dicta quas nihil consectetur voluptatem perferendis excepturi eligendi at exercitationem pariatur quam hic libero odit nisi.
+        </p>
+      </div>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
+
+  <script>
+
+    var firebaseConfig = {
+      apiKey: "AIzaSyBonIcI90E2l3XxyTNiLnAnzSJbBpuLEOI",
+      authDomain: "ebookedital.firebaseapp.com",
+      databaseURL: "https://ebookedital.firebaseio.com",
+      projectId: "ebookedital",
+      storageBucket: "ebookedital.appspot.com",
+      messagingSenderId: "623818644529",
+      appId: "1:623818644529:web:8946dd0d0771a564d54910"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const add = document.getElementById("send"); 
+    add.addEventListener("click", sendMail);
+
+    var refMail = firebase.database().ref('/emails');
+
+    function sendMail() {
+      refMail.push(document.getElementById("mail").value); 
+      alert('Enviado!');
+      document.getElementById("mail").value = "";
+    }
+
+  </script>
+  
+</body>
+</html>
